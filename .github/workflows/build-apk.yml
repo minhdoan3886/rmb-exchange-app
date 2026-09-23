@@ -37,10 +37,8 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Initialize Capacitor Android Platform
-        run: |
-          npx cap add android || true
-          npx cap sync android
+      - name: Sync Capacitor Android Platform
+        run: npx cap sync android
 
       - name: Make Gradle executable
         run: chmod +x android/gradlew
